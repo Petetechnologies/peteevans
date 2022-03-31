@@ -1,0 +1,29 @@
+body{
+	background: #dbf2f4;
+}
+h1{
+	position:absolute;
+	left: -2000px;
+}
+h2{
+	text-align: center;
+}
+img{
+	display: block;
+	margin:  100px auto;
+	max-width: 800px;
+	height: auto;
+}
+@media(max-width: 900px){
+	img{
+		max-width: 100%;
+	}
+}
+
+div.container6 {
+  height: 10em;
+  display: flex;
+  align-items: center;
+  justify-content: center }
+div.container6 p {
+  margin: 0 }
