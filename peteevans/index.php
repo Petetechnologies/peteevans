@@ -8,6 +8,8 @@
     <meta name="generator" content="Hugo 0.88.1">
     <title>Pete Evans Web Consultancy</title>
 
+      <?php wp_head(); ?> 
+
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/jumbotron/">
 
     
@@ -27,9 +29,16 @@
 <meta name="theme-color" content="#7952b3">
 
 <script src="https://kit.fontawesome.com/1b529a9ec5.js" crossorigin="anonymous"></script>
+<link href="<?php bloginfo('template_url'); ?>/css/styles.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W8E58CTQBB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-<link href="css/styles.css" rel="stylesheet">
-    
+  gtag('config', 'G-W8E58CTQBB');
+</script>
   </head>
   <body>
     
@@ -48,59 +57,45 @@
 
 
     <div class="p-5 mb-4 bg-light rounded-3 dark-blue text-white intro_area">
-      <div class="container-fluid py-5">
-  <img class="intro_me top_image" src="img/pete-evans8.png">
-        <h1 class="display-5 fw-bold">Expert WordPress and Woocommerce Services</h1>
-<h2>Hi, I'm Pete Evans, an experienced UK-based web consultant and developer</h2>
-        <p class="col-md-8">I specialising in WordPress and webstore development, integration, hosting and optimisation. I have worked on web projects for universities, major high street brands, and global technology companies, as well as small business start ups and sole traders.
-</p>
-<p class="col-md-8">If you’d like to hire me or simply ask my advice my contact details are at the bottom of this page. I'm friendly so don't be shy!
+      <div class="container-fluid py-5 homepage_intro">
 
-</p>
+
+<?php
+if ( have_posts() ) : 
+    while ( have_posts() ) : the_post();
+  ?>
+<img class="intro_me top_image" src="https://www.peteevans.co.uk/wp-content/uploads/2022/05/pete-evans8.png">
+<h1 class="display-5 fw-bold"><?php the_title(); ?></h1>
+<?php the_content(); ?>
+<?php
+    endwhile;
+else :
+    _e( 'Sorry, no posts matched your criteria.', 'textdomain' );
+endif;
+?>
        <!-- <button class="btn btn-primary btn-lg" type="button">Example button</button>-->
        <div class="bottom-space"></div>
       </div>
       <div>
-       <img class="intro_me bottom_image" src="img/pete-evans8.png">
+       <img class="intro_me bottom_image" src="https://www.peteevans.co.uk/wp-content/uploads/2022/05/pete-evans8.png">
        </div>
     </div>
 
-    <div class="row align-items-md-stretch">
-      <div class="col-md-6">
+<div class="row align-items-md-stretch">
+    <?php if ( have_rows( 'sections' ) ) : ?>
+  <?php while ( have_rows( 'sections' ) ) : the_row(); ?>
+<div class="col-md-6">
         <div class="h-100 p-5 bg-dark rounded-3 light-blue">
-          <i class="fa-solid fa-basket-shopping"></i>
-          <h2>Website and Webstore Consultancy</h2>
-          <p>Would you like to add westore functionality to an existing website? Or improve the functionality of an existing webstore. Do you have an existing website which isn’t working for you? I can help develop improved user experience, or create a custom theme.</p>
-</p>
-          <button class="btn btn-outline-light" type="button">Example button</button>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="h-100 p-5 bg-light border rounded-3 light-blue">
-          <i class="fa-brands fa-wordpress"></i>
-          <h2>WordPress Development</h2>
-          <p>WordPress powers the vast majority of websites on the Internet, and thanks to its ease of use and large developer community and it’s easy to see why. However, no matter how easy it appears it still requires technical knowledge to set up optimise.Or perhaps you have a bespoke requirement…
-</p>
-          <!--<button class="btn btn-outline-secondary" type="button">Example button</button>-->
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="h-100 p-5 bg-light border rounded-3 light-blue">
-          <i class="fa-brands fa-google"></i>
-          <h2>Google Analytics, Tag Manager and Data Studio</h2>
-          <p>Do you want help finding out how your website is performing? Are visitors finding your site but not spending any time on it or completing an order? You can find out your visitors’ behaviour through a combination of analytical tools such as Google Tag Manager, Analytics and Data Studios.</p>
-         <!-- <button class="btn btn-outline-light" type="button">Example button</button>-->
-        </div>
-      </div>
-      <div class="col-md-6">
-        
-          <div class="h-100 p-5 bg-dark rounded-3 light-blue">
-            <i class="fa-solid fa-hotel"></i>
-          <h2>Web Hosting and Maintenance</h2>
-          <p>Making a site live is only half the story. It needs to be maintained, plugins, CMS and PHP all regularly updated. Without this your website is open to attack by hackers. If your site is already compromised I can cleanse and resurrect it.</p>
-         <!-- <button class="btn btn-outline-secondary" type="button">Example button</button>-->
-        </div>
-      </div>
+          <?php the_sub_field( 'section_icon' ); ?>
+          <h2><?php the_sub_field( 'section_title' ); ?></h2>
+          <?php the_sub_field( 'section_content' ); ?>
+</div>
+</div>
+  <?php endwhile; ?>
+<?php else : ?>
+  <?php // no rows found ?>
+<?php endif; ?>
+
         <div class="col-md-6">
         <div class="h-100 p-5 bg-dark rounded-3 light-blue">
           <i class="fa-solid fa-address-card"></i>
@@ -129,7 +124,7 @@
       </div>
 
       <div class="col-md-6 last-box" >
-        <div class="h-100 p-5 bg-dark rounded-3 light-blue" style="background:url('img/winchester_watercolour.png') no-repeat center 200px">
+        <div class="h-100 p-5 bg-dark rounded-3 light-blue" style="background:url('https://www.peteevans.co.uk/wp-content/uploads/2022/05/winchester_watercolour.png') no-repeat center 200px">
 
           
       
@@ -158,3 +153,4 @@
   </body>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </html>
+<?php wp_footer(); ?>

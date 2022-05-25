@@ -1,0 +1,133 @@
+body{
+	/*background: #74e5da;*/
+}
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .dark-blue{
+        background-color:#189ab4 !important;
+      }
+      .mid-blue{
+        background-color: #74e5da !important;
+      }
+      .light-blue{
+        background-color: #dbf2f4 !important;
+      }
+      div.row div{
+        margin-bottom: 1.47rem;
+      }
+      h2{
+        font-weight: 700;
+      }
+.dark-blue h2, .dark-blue h3, .dark-blue p, .dark-blue p a{
+	color: #fff;
+}
+
+.intro_area{
+	
+	/*background:url('../img/pete-evans8.png') right bottom no-repeat;*/
+	position: relative;
+}
+.intro_area p{
+  font-size: 1.3rem;
+}
+img.intro_me{
+	position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  width: 480px;
+  border-bottom-right-radius: 5px;
+}
+@media(max-width: 992px){
+	.intro_area{
+	background:none;
+	}
+	img.intro_me{
+	width: 250px;
+	height: auto;
+	display: inherit;
+	border-bottom-right-radius: 5px;
+}
+}
+@media(max-width: 768px){
+  .bottom-space{
+  height: 160px;
+}
+div.last-box{
+  display: none;
+}
+}
+@media(max-width: 576px){
+  img.intro_me{
+    width: calc(100% - 10px);
+    height: auto;
+border-bottom-right-radius: 5px;
+border-bottom-left-radius: 5px;
+background: #fff;
+position: relative;
+margin: 5px;
+}
+img.intro_me.top_image{
+  border-bottom-right-radius: 0;
+border-bottom-left-radius: 0;
+}
+img.intro_me.bottom_image{
+  display: none;
+}
+.py-5{
+  padding-top:.7rem !important;
+  padding-bottom:.7rem !important;
+}
+.bottom-space{
+  height: 0;
+}
+}
+
+@media(max-width: 576px){
+	.intro_area{
+		padding: 1rem !important;
+	}
+}
+
+
+.fa-brands, .fab, .fa-solid{
+  font-size: 5rem;
+  text-align: center;
+  display: block;
+  margin-bottom: 10px;
+  color: #189ab4;
+}
+@media(max-width:768px) {
+  .fa-brands, .fab, .fa-solid{
+  text-align:left;
+}
+}
+a{
+  color: #000;
+}
+a:hover{
+  color: #189ab4;
+}
+@media(min-width:768px ){
+.homepage_intro p{
+width:75%
+}
+.homepage_intro h2{
+  width: 77%;
+}
+.homepage_intro h1{
+  width: 78%;
+}
+}
