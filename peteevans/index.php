@@ -76,6 +76,7 @@ endif;
        <!-- <button class="btn btn-primary btn-lg" type="button">Example button</button>-->
        <div class="bottom-space"></div>
       </div>
+
       <div>
        <img class="intro_me bottom_image" src="https://www.peteevans.co.uk/wp-content/uploads/2022/05/pete-evans8.png">
        </div>
@@ -123,14 +124,12 @@ endif;
         </div>
       </div>
 
+<!--
       <div class="col-md-6 last-box" >
         <div class="h-100 p-5 bg-dark rounded-3 light-blue" style="background:url('https://www.peteevans.co.uk/wp-content/uploads/2022/05/winchester_watercolour.png') no-repeat center 200px">
-
-          
-      
-        <!--  <button class="btn btn-outline-light" type="button">Example button</button>-->
         </div>
       </div>
+    -->
 
 <!--
       <div class="col-md-6">
