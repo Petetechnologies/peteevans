@@ -64,7 +64,7 @@
 if ( have_posts() ) : 
     while ( have_posts() ) : the_post();
   ?>
-<img class="intro_me top_image" src="https://www.peteevans.co.uk/wp-content/uploads/2022/05/pete-evans8.png">
+<img class="intro_me top_image" src="<?php echo get_the_post_thumbnail_url( get_the_ID());?>">
 <h1 class="display-5 fw-bold"><?php the_title(); ?></h1>
 <?php the_content(); ?>
 <?php
@@ -78,7 +78,7 @@ endif;
       </div>
 
       <div>
-       <img class="intro_me bottom_image" src="https://www.peteevans.co.uk/wp-content/uploads/2022/05/pete-evans8.png">
+       <!--<img class="intro_me bottom_image" src="https://www.peteevans.co.uk/wp-content/uploads/2022/05/pete-evans8.png">-->
        </div>
     </div>
 
@@ -102,19 +102,19 @@ endif;
           <i class="fa-solid fa-address-card"></i>
           <h2>Contact</h2>
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-lg-6">
               <h3>Location</h3>
           <p>Winchester, Hampshire <br>SO21 3EB</p>
             </div>
-            <div class="col-md-6">
+            <div class="col-lg-6">
               <h3>Email</h3>
 <p><a href="mailto:pete@peteevans.co.uk">pete@peteevans.co.uk</a></p>
             </div>
-            <div class="col-md-6">
+            <div class="col-lg-6">
               <h3>Phone</h3>
 <p><a href="tel:07952 896640">07952 896640</a></p>
             </div>
-            <div class="col-md-6">
+            <div class="col-lg-6">
               <h3>LinkedIn</h3>
 <p><a href="https://www.linkedin.com/in/peteevanswebdesign/">www.linkedin.com<br/>/in/peteevanswebdesign</a></p>
             </div>
@@ -142,7 +142,7 @@ endif;
     </div>
 
     <footer class="pt-3 mt-4 text-muted border-top">
-      &copy; 2022 Pete Evans Web Consultancy
+      &copy; <?php echo date("Y"); ?> Pete Evans Web Consultancy
     </footer>
   </div>
 </main>

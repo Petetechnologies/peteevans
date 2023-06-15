@@ -48,8 +48,19 @@ img.intro_me{
   right: 0;
   width: 50%;
   width: 480px;
-  border-bottom-right-radius: 5px;
+  /*border-bottom-right-radius: 5px;*/
+  object-position: bottom -35px right -90px;
 }
+@media(max-width: 1400px){
+img.intro_me{
+object-position: bottom -35px right -125px;
+}
+  }
+  @media(max-width: 1200px){
+img.intro_me{
+object-position: bottom -90px right -128px;
+}
+  }
 @media(max-width: 992px){
 	.intro_area{
 	background:none;
@@ -58,9 +69,11 @@ img.intro_me{
 	width: 250px;
 	height: auto;
 	display: inherit;
-	border-bottom-right-radius: 5px;
+  object-position: bottom -5px right 0;
 }
+	/*border-bottom-right-radius: 5px;*/
 }
+
 @media(max-width: 768px){
   .bottom-space{
   height: 160px;
@@ -72,16 +85,18 @@ div.last-box{
 @media(max-width: 576px){
   img.intro_me{
     width: calc(100% - 10px);
-    height: auto;
+    /*height: auto;*/
 border-bottom-right-radius: 5px;
 border-bottom-left-radius: 5px;
 background: #fff;
 position: relative;
 margin: 5px;
+object-fit: cover;
+max-height: 360px;
+object-position: center;
 }
 img.intro_me.top_image{
-  border-bottom-right-radius: 0;
-border-bottom-left-radius: 0;
+  border-radius: 5px;
 }
 img.intro_me.bottom_image{
   display: none;
