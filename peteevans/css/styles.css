@@ -74,6 +74,7 @@ object-position: bottom -90px right -128px;
 	/*border-bottom-right-radius: 5px;*/
 }
 
+/*
 @media(max-width: 768px){
   .bottom-space{
   height: 160px;
@@ -82,7 +83,8 @@ div.last-box{
   display: none;
 }
 }
-@media(max-width: 576px){
+*/
+@media(max-width: 768px){
   img.intro_me{
     width: calc(100% - 10px);
     /*height: auto;*/
